@@ -14,6 +14,19 @@ module.exports = {
       }
     },
   },
+  safelist: [
+    // BACKGROUD COLOURS
+    "bg-my_pink",
+    "bg-[#F5F5F5]",
+    "bg-my_light_purple",
+
+    // TEXT COLOURS
+    "text-my_dark_purple",
+    "text-my_blue",
+
+    // FONT
+    "font-family-[Cambay]"
+  ],
   plugins: [],
 }
 

@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
   type MenuOptions = {
-    text: String;
-    link: String;
+    text: string;
+    link: string;
   }
 
 function Navbar() {
@@ -17,10 +17,10 @@ function Navbar() {
     
     return (
         <div>
-            <nav class="bg-my_dark_purple border-gray-200">
-                <div class="flex flex-wrap items-center justify-between mx-auto p-4">
+            <nav className="bg-my_dark_purple border-gray-200">
+                <div className="flex flex-wrap items-center justify-between mx-auto p-4">
                     {/* Logo */}
-                    <Link to={"/"} class="logo-txt text-3xl text-white hover:text-my_pink">
+                    <Link to={"/"} className="logo-txt text-3xl text-white hover:text-my_pink">
                         <p>Farin's</p>
                         <p>Blog</p>
                     </Link>
@@ -28,22 +28,22 @@ function Navbar() {
                     {/* Navbar content button for mobile */}
                     <button 
                         type="button" 
-                        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-purple-300 focus:outline-none"
+                        className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-purple-300 focus:outline-none"
                         onClick={() => setShowMobileMenu(true)}
                     >
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                        <span className="sr-only">Open main menu</span>
+                        <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
                             <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
                         </svg>
                     </button>
 
                     
                     {/* Navbar Links */}
-                    <div class="hidden w-full md:block md:w-auto text-white text-xl font-family-[Alexandria]" id="navbar-dropdown">
-                            <ul class="flex flex-wrap items-center justify-between font-medium p-4 md:p-0 mt-4 border rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent">
+                    <div className="hidden w-full md:block md:w-auto text-white text-xl font-family-[Alexandria]" id="navbar-dropdown">
+                            <ul className="flex flex-wrap items-center justify-between font-medium p-4 md:p-0 mt-4 border rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent">
                                 {myMenuOptions.map((item, key) => (
                                     <li key={key}>
-                                            <Link to={item.link} class="block py-2 px-3 rounded-sm hover:text-my_pink md:hover:bg-transparent md:border-0 md:p-0">
+                                            <Link to={item.link} className="block py-2 px-3 rounded-sm hover:text-my_pink md:hover:bg-transparent md:border-0 md:p-0">
                                                 {item.text}
                                             </Link>
                                     </li>
@@ -53,13 +53,13 @@ function Navbar() {
                 </div>
 
                 {showMobileMenu &&
-                    <div class="md:hidden relative flex flex-col bg-white shadow-sm border border-slate-200 text-xl">
-                        <nav class="flex min-w-[240px] flex-col">
+                    <div className="md:hidden relative flex flex-col bg-white shadow-sm border border-slate-200 text-xl">
+                        <nav className="flex min-w-[240px] flex-col">
                             {myMenuOptions.map((item, key) => (
                                 <Link
                                     key={key}
                                     to={item.link}
-                                    class="odd:bg-my_pink even:bg-my_light_purple font-family-[Alexandria] font-bold text-my_dark_blue p-8 flex w-full items-center p-3 transition-all"
+                                    className="odd:bg-my_pink even:bg-my_light_purple font-family-[Alexandria] font-bold text-my_dark_blue p-8 flex w-full items-center p-3 transition-all"
                                 >
                                     {item.text}
                                 </Link>

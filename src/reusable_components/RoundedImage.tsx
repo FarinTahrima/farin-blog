@@ -1,9 +1,9 @@
 import React from "react";
 
 interface RoundedImageProps {
-    src: String;
-    radius: Number;
-    alt?: String;
+    src: string;
+    radius: number;
+    alt?: string;
 }
 
 const RoundedImage = ({
