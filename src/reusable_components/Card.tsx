@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React from "react";
 
 interface CardProps {
     children?: React.ReactNode;
@@ -16,13 +16,17 @@ const Card = ({
     predefinedBgColour,
     customBgColourHex
 }: CardProps) => {
-    const bgColorClass = predefinedBgColour 
-        ? `bg-${predefinedBgColour}`
-        : customBgColourHex 
-            ? `bg-[#${customBgColourHex}]`
-            : "bg-[#FFFFFF]";
+
+    const getCardClass = () => {
+        let cardClass = "";
+        if (predefinedBgColour) { cardClass += ` bg-${predefinedBgColour}` }
+        else if (customBgColourHex) { cardClass += ` bg-[#${customBgColourHex}]` }
+        else { cardClass += " bg-[#FFFFFF]" }
+        return cardClass;
+    }
+
     return (
-        <div className={`${bgColorClass}`}>
+        <div className={`${getCardClass()}`}>
             {children}
         </div>
     );

@@ -33,6 +33,7 @@ module.exports = {
 
     //BORDER
     "border-gray-700"
+    
   ],
   plugins: [],
 }
