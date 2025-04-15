@@ -21,13 +21,18 @@ module.exports = {
     "bg-my_light_purple",
     "bg-white",
     "bg-my_blue",
+    "bg-gray-100",
 
     // TEXT COLOURS
     "text-my_dark_purple",
     "text-my_blue",
+    "text-gray-700",
 
     // FONT
-    "font-family-[Cambay]"
+    "font-family-[Cambay]",
+
+    //BORDER
+    "border-gray-700"
   ],
   plugins: [],
 }
