@@ -14,7 +14,7 @@ export type CardComponent = {
 const Card = ({
     children,
     predefinedBgColour,
-    customBgColourHex,
+    customBgColourHex
 }: CardProps) => {
     const bgColorClass = predefinedBgColour 
         ? `bg-${predefinedBgColour}`
@@ -22,7 +22,7 @@ const Card = ({
             ? `bg-[#${customBgColourHex}]`
             : "bg-[#FFFFFF]";
     return (
-        <div className={`${bgColorClass} p-4`}>
+        <div className={`${bgColorClass}`}>
             {children}
         </div>
     );

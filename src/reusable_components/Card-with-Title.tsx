@@ -39,6 +39,8 @@ const CardWithTitle = ({
     children
 }: CardWithTitleProps) => {
 
+    // HELPERS
+    
     const getTitleClass = () => {
         let titleClass = "";
         if (fontFamily) { titleClass += ` font-family-${fontFamily}`}
@@ -59,15 +61,27 @@ const CardWithTitle = ({
         return suffixClass;
     }
 
+    const getSuffixClassMobile = () => {
+        if (!suffixLink) {
+            return "";
+        }
+        
+        let suffixClass = `font-family-${fontFamily}`;
+        if (suffixLink.predefinedColour) { suffixClass += ` bg-${suffixLink.predefinedColour}`}
+        if (!suffixLink.predefinedColour && suffixLink.customColourHex) { suffixClass += ` bg-[#${customColourHex}]`}
+        return suffixClass;
+    }
+
     return (
         <div>
             <div className="flex flex-wrap justify-between items-center">
                 <p className={`text-2xl mb-8 ${getTitleClass()}`}>
                     {titleValue}
                 </p>
+                {/* SUFFIX LINK FOR NON-MOBILE */}
                 {suffixLink && 
                     <Link to={suffixLink.link}>
-                        <p className={`text-xl mb-8 ${getSuffixClass()}`}>
+                        <p className={`text-xl mb-8 ${getSuffixClass()} max-sm:hidden`}>
                             {suffixLink.value}
                         </p>
                     </Link>
@@ -80,6 +94,17 @@ const CardWithTitle = ({
             >
                 {children}
             </Card>
+            
+            {/* SUFFIX LINK FOR MOBILE - will be placed below for responsiveness */}
+            {suffixLink && 
+                <div className="max-sm:flex sm:hidden justify-center pt-4">
+                   <Link to={suffixLink.link}>
+                        <button className={`${getSuffixClassMobile()} text-white font-bold py-2 px-4 rounded-full`}>
+                            {suffixLink.value}
+                        </button>
+                    </Link>
+                </div>
+            }
         </div>
     );
 };
