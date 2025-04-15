@@ -26,6 +26,7 @@ module.exports = {
     // TEXT COLOURS
     "text-my_dark_purple",
     "text-my_blue",
+    "text-my_dark_blue",
     "text-gray-700",
 
     // FONT
