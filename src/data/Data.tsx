@@ -11,12 +11,12 @@ type Location = {
     bgColor: string;
 };
 
-type Skill = {
+export type Skill = {
   name: string;
   imageUrl: string;
   ratings: number;
   priority: number; // HIGHER THE BETTER
-  duration: string;
+  months: number;
 }
 
 export type Work = {
@@ -27,7 +27,7 @@ export type Work = {
   duration: string;
 };
 
-type Education = {
+export type Education = {
   location: Location;
   course: string;
   skills: string[];
@@ -81,58 +81,58 @@ export const myEducation: Education[] = [
   {
     location: { name: "NYP", imageUrl: "NYP.png" , bgColor: "white"},
     course: "Diploma in Electronics, Computer and Communications Engineering",
-    skills: ["C++", "RFID", "Arduino", "Engineering Mathematics", "Digital Electronics", "Audio & Visuals"],
-    achievements: ["3rd Prize in AVSD Showcase", "Director's List in Year 2 Sem 1", "Director's List in Year 2 Sem 2", "Director's List in Year 3 Sem 2"]
+    skills: ["C++", "RFID", "Digital Electronics", "Arduino", "Audio & Visuals", "Engineering Mathematics"],
+    achievements: ["3rd Prize in AVSD Showcase", "Director's List in Year2 Sem1", "Director's List in Year2 Sem2", "Director's List in Year3 Sem2"]
   }
 ];
 
 export const mySkills: Skill[] = [
-  { name:"A/B Testing", imageUrl: "AB Testing.png", ratings: 3, priority: 2, duration: "3 months" },
-  { name:"Agile", imageUrl: "Agile.png", ratings: 8, priority: 4, duration: "2.5 years" },
-  { name:"AI", imageUrl: "AI.jpg", ratings: 2, priority: 3, duration: "2 months" },
-  { name:"Algorithms", imageUrl: "Algorithms.png", ratings: 5, priority: 4, duration: "6 months" },
-  { name:"Arduino", imageUrl: "Arduino.jpg", ratings: 4, priority: 1, duration: "6 months" },
-  { name:"Audio & Visuals Systems Design", imageUrl: "AVSD.png", ratings: 3, priority: 1, duration: "6 months" },
-  { name:"Bootstrap", imageUrl: "Bootstrap.jpg", ratings: 5, priority: 3, duration: "1 year" },
-  { name:"C#", imageUrl: "C#.png", ratings: 2, priority: 4, duration: "3 months" },
-  { name:"C++", imageUrl: "C++.png", ratings: 2, priority: 4, duration: "3 months" },
-  { name:"Camtasia", imageUrl: "Camtasia.png", ratings: 5, priority: 1, duration: "1 month" },
-  { name:"Computational Thinking", imageUrl: "ComputationalThinking.png", ratings: 2, priority: 3, duration: "1 year" },
-  { name:"CSS", imageUrl: "CSS.png", ratings: 6, priority: 4, duration: "3 years" },
-  { name:"Digital Electronics", imageUrl: "DigitalElectronics.jpg", ratings: 4, priority: 2, duration: "6 months" },
-  { name:".NET", imageUrl: "Dotnet.png", ratings: 2, priority: 4, duration: "2 months"},
-  { name:"Elastic Search", imageUrl: "ElasticSearch.png", ratings: 3, priority: 3, duration: "6 months" },
-  { name:"Engineering Mathematics", imageUrl: "EngineeringMathematics.jpg", ratings: 5, priority: 2, duration: "2 years" },
-  { name:"Figma", imageUrl: "Figma.png", ratings: 7, priority: 3, duration: "3 years" },
-  { name:"Flask", imageUrl: "Flask.png", ratings: 5, priority: 4, duration: "6 months"},
-  { name:"Git", imageUrl: "Git.png", ratings: 7, priority: 4, duration: "1 year" },
-  { name:"GitHub", imageUrl: "GitHub.png", ratings: 8, priority: 4, duration: "2 years" },
-  { name:"GraphQL", imageUrl: "GraphQL.png", ratings: 4, priority: 3, duration: "3 months" },
-  { name:"HTML", imageUrl: "HTML.png", ratings: 8, priority: 4, duration: "3 years" },
-  { name:"Java", imageUrl: "Java.png", ratings: 8, priority: 5, duration: "2 years" },
-  { name:"JavaScript", imageUrl: "JavaScript.png", ratings: 6, priority: 4, duration: "6 months" },
-  { name:"Jenkins", imageUrl: "Jenkins.png", ratings: 3, priority: 3, duration: "6 months"},
-  { name:"JIRA", imageUrl: "JIRA.png", ratings: 7, priority: 3, duration: "1.5 years"},
-  { name:"Kafka", imageUrl: "Kafka.png", ratings: 4, priority: 3, duration: "8 months" },
-  { name:"Kibana", imageUrl: "Kibana.png", ratings: 7, priority: 3, duration: "6 months" },
-  { name:"Materialize", imageUrl: "Materialize.png", ratings: 4, priority: 3, duration: "3 months" },
-  { name:"Micro services", imageUrl: "Microservices.jpg", ratings: 5, priority: 3, duration: "1 year" },
-  { name:"MongoDB", imageUrl: "MongoDB.png", ratings: 4, priority: 4, duration: "5 months" },
-  { name:"Openshift", imageUrl: "Openshift.png", ratings: 2, priority: 3 , duration: "2 weeks"},
-  { name:"PHP", imageUrl: "PHP.png", ratings: 5, priority: 4, duration: "3 months" },
-  { name:"Postman", imageUrl: "Postman.png", ratings: 4, priority: 3, duration: "6 months"},
-  { name:"Presentation", imageUrl: "Presentation.png", ratings: 6, priority: 3, duration: "2 years" },
-  { name:"Python", imageUrl: "Python.jpg", ratings: 5, priority: 5, duration: "1 year" },
-  { name:"React", imageUrl: "React.png", ratings: 6, priority: 5, duration: "1.5 years" },
-  { name:"Redux", imageUrl: "Redux.png", ratings: 6, priority: 3, duration: "1 years" },
-  { name:"RFID", imageUrl: "RFID.jpg", ratings: 2, priority: 2, duration: "1 month" },
-  { name:"Scrum", imageUrl: "Scrum.jpg", ratings: 8, priority: 4, duration: "3 years" },
-  { name:"Spring Boot", imageUrl: "Spring Boot.jpg", ratings: 6, priority: 4, duration: "1.5 years" },
-  { name:"SQL", imageUrl: "SQL.png", ratings: 7, priority: 5, duration: "2 years" },
-  { name:"Tailwind CSS", imageUrl: "TailwindCSS.png", ratings: 6, priority: 3, duration: "3 months" },
-  { name:"Testing", imageUrl: "Testing.png", ratings: 7, priority: 4, duration: "2 years" },
-  { name:"TypeScript", imageUrl: "TypeScript.png", ratings: 7, priority: 4, duration: "2 years" },
-  { name:"Unity", imageUrl: "Unity.png", ratings: 4, priority: 3, duration: "3 months" },
-  { name:"Unix", imageUrl: "Unix.jpg", ratings: 6, priority: 3, duration: "6 months" },
-  { name:"Web Socket", imageUrl: "Websockets.png", ratings: 5, priority: 3, duration: "2 months"}
+  { name:"A/B Testing", imageUrl: "AB Testing.png", ratings: 3, priority: 2, months: 3 },
+  { name:"Agile", imageUrl: "Agile.png", ratings: 8, priority: 4, months: 30 },
+  { name:"AI", imageUrl: "AI.jpg", ratings: 2, priority: 3, months: 2 },
+  { name:"Algorithms", imageUrl: "Algorithms.png", ratings: 5, priority: 4, months: 6 },
+  { name:"Arduino", imageUrl: "Arduino.jpg", ratings: 4, priority: 1, months: 6 },
+  { name:"Audio & Visuals", imageUrl: "AVSD.png", ratings: 3, priority: 1, months: 6 },
+  { name:"Bootstrap", imageUrl: "Bootstrap.jpg", ratings: 5, priority: 3, months: 12 },
+  { name:"C#", imageUrl: "CSharp.png", ratings: 2, priority: 4, months: 3 },
+  { name:"C++", imageUrl: "C++.png", ratings: 2, priority: 4, months: 3 },
+  { name:"Camtasia", imageUrl: "Camtasia.jpg", ratings: 5, priority: 1, months: 1 },
+  { name:"Computational Thinking", imageUrl: "ComputationalThinking.png", ratings: 2, priority: 3, months: 12 },
+  { name:"CSS", imageUrl: "CSS.png", ratings: 6, priority: 4, months: 36 },
+  { name:"Digital Electronics", imageUrl: "DigitalElectronics.jpg", ratings: 4, priority: 2, months: 6 },
+  { name:".Net", imageUrl: "Dotnet.png", ratings: 2, priority: 4, months: 2},
+  { name:"Elastic Search", imageUrl: "ElasticSearch.png", ratings: 3, priority: 3, months: 6 },
+  { name:"Engineering Mathematics", imageUrl: "EngineeringMathematics.jpg", ratings: 5, priority: 2, months: 24 },
+  { name:"Figma", imageUrl: "Figma.png", ratings: 7, priority: 3, months: 36 },
+  { name:"Flask", imageUrl: "Flask.png", ratings: 5, priority: 4, months: 6},
+  { name:"Git", imageUrl: "Git.png", ratings: 7, priority: 4, months: 12 },
+  { name:"GitHub", imageUrl: "GitHub.png", ratings: 8, priority: 4, months: 24 },
+  { name:"GraphQL", imageUrl: "GraphQL.png", ratings: 4, priority: 3, months: 3 },
+  { name:"HTML", imageUrl: "HTML.png", ratings: 8, priority: 4, months: 36 },
+  { name:"Java", imageUrl: "Java.png", ratings: 8, priority: 5, months: 24 },
+  { name:"JavaScript", imageUrl: "JavaScript.png", ratings: 6, priority: 4, months: 6 },
+  { name:"Jenkins", imageUrl: "Jenkins.png", ratings: 3, priority: 3, months: 6},
+  { name:"JIRA", imageUrl: "JIRA.png", ratings: 7, priority: 3, months: 18},
+  { name:"Kafka", imageUrl: "Kafka.png", ratings: 4, priority: 3, months: 8 },
+  { name:"Kibana", imageUrl: "Kibana.png", ratings: 7, priority: 3, months: 6 },
+  { name:"Materialize", imageUrl: "Materialize.png", ratings: 4, priority: 3, months: 3 },
+  { name:"Micro services", imageUrl: "Microservices.jpg", ratings: 5, priority: 3, months: 12 },
+  { name:"MongoDB", imageUrl: "MongoDB.png", ratings: 4, priority: 4, months: 5 },
+  { name:"Openshift", imageUrl: "Openshift.png", ratings: 2, priority: 3 , months: 1},
+  { name:"PHP", imageUrl: "PHP.png", ratings: 5, priority: 4, months: 3 },
+  { name:"Postman", imageUrl: "Postman.png", ratings: 4, priority: 3, months: 6},
+  { name:"Presentation", imageUrl: "Presentation.png", ratings: 6, priority: 3, months: 24 },
+  { name:"Python", imageUrl: "Python.jpg", ratings: 5, priority: 5, months: 12 },
+  { name:"React", imageUrl: "React.png", ratings: 6, priority: 5, months: 18 },
+  { name:"Redux", imageUrl: "Redux.png", ratings: 6, priority: 3, months: 12 },
+  { name:"RFID", imageUrl: "RFID.jpg", ratings: 2, priority: 2, months: 1 },
+  { name:"Scrum", imageUrl: "Scrum.jpg", ratings: 8, priority: 4, months: 36 },
+  { name:"Spring Boot", imageUrl: "Spring Boot.jpg", ratings: 6, priority: 4, months: 18 },
+  { name:"SQL", imageUrl: "SQL.png", ratings: 7, priority: 5, months: 24 },
+  { name:"Tailwind CSS", imageUrl: "TailwindCSS.png", ratings: 6, priority: 3, months: 3 },
+  { name:"Testing", imageUrl: "Testing.png", ratings: 7, priority: 4, months: 24 },
+  { name:"TypeScript", imageUrl: "TypeScript.png", ratings: 7, priority: 4, months: 24 },
+  { name:"Unity", imageUrl: "Unity.png", ratings: 4, priority: 3, months: 3 },
+  { name:"Unix", imageUrl: "Unix.jpg", ratings: 6, priority: 3, months: 6 },
+  { name:"Web Socket", imageUrl: "Websockets.png", ratings: 5, priority: 3, months: 2}
 ];
