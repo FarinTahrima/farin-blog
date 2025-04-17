@@ -22,6 +22,8 @@ module.exports = {
     "bg-white",
     "bg-my_blue",
     "bg-gray-100",
+    "bg-black",
+    "bg-[#C7FE02]",
 
     // TEXT COLOURS
     "text-my_dark_purple",

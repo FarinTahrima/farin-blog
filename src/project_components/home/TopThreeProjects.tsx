@@ -1,9 +1,9 @@
 import React from "react";
-import CardWithTitle from "../reusable_components/Card-with-Title.tsx";
-import { DEFAULT_FONT_COLOR, DEFAULT_FONT_FAMILY } from "../utils/utils.tsx";
-import { myProjects } from "../data/Data.tsx";
-import Card from "../reusable_components/Card.tsx";
-import FlashMessage from "../reusable_components/FlashMessage.tsx";
+import CardWithTitle from "../../reusable_components/Card-with-Title.tsx";
+import { DEFAULT_FONT_COLOR, DEFAULT_FONT_FAMILY } from "../../utils/utils.tsx";
+import { myProjects } from "../../data/Data.tsx";
+import Card from "../../reusable_components/Card.tsx";
+import FlashMessage from "../../reusable_components/FlashMessage.tsx";
 
 const TopThreeProjects = () => {
     return (

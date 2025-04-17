@@ -17,7 +17,7 @@ const Tag = ({
 }: TagProps) => {
     
     const getTagClass = () => {
-        let tagClass = "border px-2 text-2xl max-sm:text-lg font-bold";
+        let tagClass = "border px-2 font-bold rounded-lg";
         if (borderColor) { tagClass += ` border-${borderColor}`}
         if (fontFamily) { tagClass += ` font-family-[${fontFamily}]`}
         if (textColor) { tagClass += ` text-${textColor}`}

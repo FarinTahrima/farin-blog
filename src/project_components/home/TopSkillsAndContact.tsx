@@ -1,6 +1,6 @@
 import React from "react";
-import CardWithTitle from "../reusable_components/Card-with-Title.tsx";
-import { DEFAULT_FONT_COLOR, DEFAULT_FONT_FAMILY } from "../utils/utils.tsx";
+import CardWithTitle from "../../reusable_components/Card-with-Title.tsx";
+import { DEFAULT_FONT_COLOR, DEFAULT_FONT_FAMILY } from "../../utils/utils.tsx";
 
 
 const TopSkillsAndContact = () => {

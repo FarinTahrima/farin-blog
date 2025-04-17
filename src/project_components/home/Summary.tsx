@@ -1,7 +1,7 @@
 import React from "react";
-import RoundedImage from "../reusable_components/RoundedImage.tsx";
+import RoundedImage from "../../reusable_components/RoundedImage.tsx";
 import '@fontsource/architects-daughter';
-import { mySummary } from "../data/Data.tsx";;
+import { mySummary } from "../../data/Data.tsx";;
 
 const Summary = () => {
     return (

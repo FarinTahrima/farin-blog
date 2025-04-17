@@ -19,7 +19,7 @@ type Skill = {
   duration: string;
 }
 
-type Work = {
+export type Work = {
   location: Location;
   skills: string[];
   wordsAboutMe: string[];
@@ -50,14 +50,14 @@ export const mySummary= " I have an immense passion for coding with versatile sk
 export const myWork: Work[] = [
   {
     location: { name: "DBS", imageUrl: "DBS.jpg" , bgColor: "black"},
-    skills: ["Java", "Spring Boot", "Kafka", "SQL", "TypeScript", "Redux", "HTML", "CSS", "GraphQL", "Microservices", "JIRA", "Agile", "Scrum", "Figma", "Jenkins", "Git", "Elastic Search", "Kibana", "Postman", "Testing"],
+    skills: ["Java", "Spring Boot", "Kafka", "SQL", "TypeScript", "Redux", "HTML", "CSS", "GraphQL", "Micro services", "JIRA", "Agile", "Scrum", "Figma", "Jenkins", "Git", "Elastic Search", "Kibana", "Postman", "Testing"],
     wordsAboutMe: ["hard working", "attention to detail","documentation", "organized", "never give up"],
     role: "Full-Stack Developer",
     duration: "1 year"
   },
   {
     location: { name: "FDM", imageUrl: "FDM.png" , bgColor: "#C7FE02"},
-    skills: ["Java", "Spring Boot", "Kafka", "SQL", "WebSocket", "React", "Tailwind", "HTML", "JIRA", "Agile", "Scrum", "Git", "Unit Testing", "AI", "Presentation", "GitHub"],
+    skills: ["Java", "Spring Boot", "Kafka", "SQL", "Web Socket", "React", "Tailwind CSS", "HTML", "JIRA", "Agile", "Scrum", "Git", "Testing", "AI", "Presentation", "GitHub"],
     wordsAboutMe: ["leader", "passionate", "never give up", "pro-active", "confident"],
     role: "IT Consultant",
     duration: "10 months"
@@ -89,7 +89,7 @@ export const myEducation: Education[] = [
 export const mySkills: Skill[] = [
   { name:"A/B Testing", imageUrl: "AB Testing.png", ratings: 3, priority: 2, duration: "3 months" },
   { name:"Agile", imageUrl: "Agile.png", ratings: 8, priority: 4, duration: "2.5 years" },
-  { name:"Artificial Intelligence", imageUrl: "AI.jpg", ratings: 2, priority: 3, duration: "2 months" },
+  { name:"AI", imageUrl: "AI.jpg", ratings: 2, priority: 3, duration: "2 months" },
   { name:"Algorithms", imageUrl: "Algorithms.png", ratings: 5, priority: 4, duration: "6 months" },
   { name:"Arduino", imageUrl: "Arduino.jpg", ratings: 4, priority: 1, duration: "6 months" },
   { name:"Audio & Visuals Systems Design", imageUrl: "AVSD.png", ratings: 3, priority: 1, duration: "6 months" },
@@ -116,7 +116,7 @@ export const mySkills: Skill[] = [
   { name:"Kafka", imageUrl: "Kafka.png", ratings: 4, priority: 3, duration: "8 months" },
   { name:"Kibana", imageUrl: "Kibana.png", ratings: 7, priority: 3, duration: "6 months" },
   { name:"Materialize", imageUrl: "Materialize.png", ratings: 4, priority: 3, duration: "3 months" },
-  { name:"Microservices", imageUrl: "Microservices.jpg", ratings: 5, priority: 3, duration: "1 year" },
+  { name:"Micro services", imageUrl: "Microservices.jpg", ratings: 5, priority: 3, duration: "1 year" },
   { name:"MongoDB", imageUrl: "MongoDB.png", ratings: 4, priority: 4, duration: "5 months" },
   { name:"Openshift", imageUrl: "Openshift.png", ratings: 2, priority: 3 , duration: "2 weeks"},
   { name:"PHP", imageUrl: "PHP.png", ratings: 5, priority: 4, duration: "3 months" },
@@ -124,6 +124,7 @@ export const mySkills: Skill[] = [
   { name:"Presentation", imageUrl: "Presentation.png", ratings: 6, priority: 3, duration: "2 years" },
   { name:"Python", imageUrl: "Python.jpg", ratings: 5, priority: 5, duration: "1 year" },
   { name:"React", imageUrl: "React.png", ratings: 6, priority: 5, duration: "1.5 years" },
+  { name:"Redux", imageUrl: "Redux.png", ratings: 6, priority: 3, duration: "1 years" },
   { name:"RFID", imageUrl: "RFID.jpg", ratings: 2, priority: 2, duration: "1 month" },
   { name:"Scrum", imageUrl: "Scrum.jpg", ratings: 8, priority: 4, duration: "3 years" },
   { name:"Spring Boot", imageUrl: "Spring Boot.jpg", ratings: 6, priority: 4, duration: "1.5 years" },
@@ -133,6 +134,5 @@ export const mySkills: Skill[] = [
   { name:"TypeScript", imageUrl: "TypeScript.png", ratings: 7, priority: 4, duration: "2 years" },
   { name:"Unity", imageUrl: "Unity.png", ratings: 4, priority: 3, duration: "3 months" },
   { name:"Unix", imageUrl: "Unix.jpg", ratings: 6, priority: 3, duration: "6 months" },
-  { name:"Websocket", imageUrl: "Websocket.png", ratings: 5, priority: 3, duration: "2 months"},
-  
-]
+  { name:"Web Socket", imageUrl: "Websockets.png", ratings: 5, priority: 3, duration: "2 months"}
+];
