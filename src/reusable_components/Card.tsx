@@ -1,10 +1,15 @@
 import React from "react";
-import { CustomStyle, getStyleClass } from "../utils/style-utils.tsx";
+import { getStyleClass } from "../utils/style-utils.tsx";
 
 interface CardProps {
-    children?: React.ReactNode;
-    style?: CustomStyle
-}
+    children: React.ReactNode;
+    style: CardStyle;
+};
+
+// STYLE TYPES
+export type CardStyle = {
+    bgColour: string;
+};
 
 const Card = ({
     children,
@@ -12,7 +17,7 @@ const Card = ({
 }: CardProps) => {
 
     return (
-        <div className={`${style && getStyleClass(style)}`}>
+        <div className={`${getStyleClass(style)}`}>
             {children}
         </div>
     );

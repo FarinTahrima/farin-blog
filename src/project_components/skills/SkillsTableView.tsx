@@ -7,7 +7,8 @@ type SkillsTableData = {
     data: Skill[];
 }
 const SkillsTableView = () => {
-
+    
+    // HELPERS
     const getData = (): SkillsTableData[] => {
         let startIndex = 1; // row no. where the first data of the new type will appear
         let data: SkillsTableData[] = [];
@@ -55,26 +56,29 @@ const SkillsTableView = () => {
         <div className="p-4 max-sm:p-0 xl:p-8">
           <div className="overflow-x-auto">
             <table className="min-w-full bg-white border border-gray-200 rounded-lg xl:text-3xl lg:text-2xl text-xl max-sm:text-[12px]">
-              <thead className="bg-my_dark_blue text-white">
-                <tr>
-                  <th className="p-2 text-left font-medium">No.</th>
-                  <th className="p-2 text-left font-medium">Skill</th>
-                  <th className="p-2 text-left font-medium">Profiency</th>
-                  <th className="p-2 text-left font-medium">Duration</th>
-                  <th className="p-2 text-left font-medium max-sm:hidden">Type</th>
-                  
-                </tr>
-              </thead>
+                {/* TABLE HEADER */}
+                <thead className="bg-my_dark_blue text-white">
+                    <tr>
+                    <th className="p-2 text-left font-medium">No.</th>
+                    <th className="p-2 text-left font-medium">Skill</th>
+                    <th className="p-2 text-left font-medium">Profiency</th>
+                    <th className="p-2 text-left font-medium">Duration</th>
+                    <th className="p-2 text-left font-medium max-sm:hidden">Type</th>
+                    </tr>
+                </thead>
               <tbody>
                 
                 {data.map((type, tKey) => {
                     var count = 0;
                     return (
                         <>
+                            {/* TO DISPLAY TYPES IN A SEPERATE ROW FOR EACH GROUP FOR MOBILE ONLY */}
                             <tr key={tKey}>
                                 <td></td>
                                 <td colSpan={4} className="flex hidden text-my_dark_blue font-bold max-sm:block">{type.type}</td>
                             </tr>
+
+                            {/* DATA FOR TABLE - LAST COL FOR TYPES IS HIDDEN WHEN MOBILE */}
                             {type.data.map((skill, sKey) => {
                                 count = count++;
                                 return ((
@@ -97,7 +101,5 @@ const SkillsTableView = () => {
         </div>
       );
   };
-
-  //     
   
   export default SkillsTableView;

@@ -4,7 +4,7 @@ interface RoundedImageProps {
     src: string;
     radius: number;
     alt?: string;
-}
+};
 
 const RoundedImage = ({
     src,

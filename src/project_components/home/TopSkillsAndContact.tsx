@@ -2,10 +2,10 @@ import React from "react";
 import CardWithTitle from "../../reusable_components/Card-with-Title.tsx";
 import { DEFAULT_FONT_COLOR, DEFAULT_FONT_FAMILY } from "../../utils/style-utils.tsx";
 
-
 const TopSkillsAndContact = () => {
     return (
         <div className="grid lg:grid-cols-3 xl:grid-cols-3 sm:grid-cols-1 md:grid-cols-1 gap-8 px-16 py-4 max-sm:p-4 max-sm:gap-4">
+            {/* TOP SKILLS */}
             <CardWithTitle
                     title={{
                         value: "My Top Skills",
@@ -31,7 +31,8 @@ const TopSkillsAndContact = () => {
                 >
                         Top 3 Skills
             </CardWithTitle>
-                
+            
+            {/* WORD CLOUD */}
             <CardWithTitle
                 title={{
                     value: "Words That Define Me",
@@ -48,6 +49,7 @@ const TopSkillsAndContact = () => {
                 Word Cloud
             </CardWithTitle>
 
+            {/* CONTACT */}
             <CardWithTitle
                 title={{
                     value: "Contact Details",

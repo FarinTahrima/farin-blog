@@ -1,7 +1,7 @@
 export const DEFAULT_FONT_FAMILY = "Cambay";
 export const DEFAULT_FONT_COLOR = "my_dark_purple";
 
-export type CustomStyle = {
+type CustomStyle = {
     bgColour?: string;
     textColour?: string;
     borderColour?: string;

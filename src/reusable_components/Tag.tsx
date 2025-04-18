@@ -1,10 +1,17 @@
-import React, { ReactNode } from "react";
-import { CustomStyle, getStyleClass } from "../utils/style-utils.tsx";
+import React from "react";
+import { getStyleClass } from "../utils/style-utils.tsx";
 
 interface TagProps {
     value: string;
-    style?: CustomStyle
-}
+    style: TagStyle;
+};
+
+// STYLE TYPES
+type TagStyle = {
+    fontFamily: string;
+    textColour: string;
+    bgColour: string;
+};
 
 const Tag = ({
     value,

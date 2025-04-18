@@ -7,6 +7,7 @@ import EducationCard from "./EducationCard.tsx";
 const SkillsCardView = () => {
     return (
         <div>
+            {/* WORK EXPERIENCE */}
             <p className={`font-family-[${DEFAULT_FONT_FAMILY}] text-${DEFAULT_FONT_COLOR} text-3xl font-bold mt-4 p-4`}>
                 Work Experience
             </p>
@@ -19,6 +20,8 @@ const SkillsCardView = () => {
                     />)
                 )}
             </div>
+
+            {/* EDUCATION */}
             <p className={`font-family-[${DEFAULT_FONT_FAMILY}] text-${DEFAULT_FONT_COLOR} text-3xl font-bold mt-4 p-4`}>
                 Education
             </p>

@@ -75,11 +75,9 @@ const EducationCard = ({
                             Achivements
                         </p>
                         <div className="flex flex-wrap mt-2 2xl:text-2xl xl:text-xl lg:text-base max-sm:text-base text-my_dark_blue">
-                            
-                                {achievements.map((achievement, key) => (
-                                    <li>{achievement}</li>
-                                ))}
-                            
+                            {achievements.map((achievement, key) => (
+                                <li key={key}>{achievement}</li>
+                            ))}
                         </div>
                     </div>
                 </div>

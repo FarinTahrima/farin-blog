@@ -1,25 +1,42 @@
-import React, { ReactNode } from "react";
-import Card from "./Card.tsx";
+import React from "react";
+import Card, { CardStyle } from "./Card.tsx";
 import { Link } from "react-router-dom";
-import { CustomStyle, getStyleClass } from "../utils/style-utils.tsx";
+import { getStyleClass } from "../utils/style-utils.tsx";
 
+interface CardWithTitleProps {
+    title: Title,
+    children: React.ReactNode,
+    cardStyle: CardStyle,
+};
+
+// TYPES
 type Title = {
     value: string;
-    titleStyle?: CustomStyle;
+    titleStyle: TitleStyle;
     suffixLink?: SuffixLink;
-}
+};
 
 type SuffixLink = {
     value: string;
     link: string;
-    style?: CustomStyle;
-    mobileStyle?: CustomStyle;
-}
-interface CardWithTitleProps {
-    title: Title,
-    children: React.ReactNode,
-    cardStyle?: CustomStyle,
-}
+    style: SuffixLinkStyle;
+    mobileStyle: SuffixLinkMobileStyle;
+};
+
+// STYLE TYPES
+type TitleStyle = {
+    fontFamily: string;
+    textColour: string;
+    bold: boolean;
+};
+
+type SuffixLinkStyle = {
+    textColour: string;
+};
+
+type SuffixLinkMobileStyle = {
+    bgColour: string;
+};
 
 const CardWithTitle = ({
     title: {
@@ -33,7 +50,7 @@ const CardWithTitle = ({
     return (
         <div>
             <div className="flex flex-wrap justify-between items-center">
-                <p className={`text-2xl mb-8 ${titleStyle && getStyleClass(titleStyle)}`}>
+                <p className={`text-2xl mb-8 ${getStyleClass(titleStyle)}`}>
                     {value}
                 </p>
                 {/* SUFFIX LINK FOR NON-MOBILE */}
