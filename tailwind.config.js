@@ -30,12 +30,15 @@ module.exports = {
     "text-my_blue",
     "text-my_dark_blue",
     "text-gray-700",
+    "text-my_pink",
+    "text-my_light_purple",
 
     // FONT
     "font-family-[Cambay]",
 
     //BORDER
-    "border-gray-700"
+    "border-gray-700",
+    "border-my_pink"
     
   ],
   plugins: [],

@@ -1,7 +1,7 @@
 import React from "react";
 import RoundedImage from "../../reusable_components/RoundedImage.tsx";
 import Tag from "../../reusable_components/Tag.tsx";
-import { DEFAULT_FONT_COLOR, DEFAULT_FONT_FAMILY } from "../../utils/utils.tsx";
+import { DEFAULT_FONT_COLOR, DEFAULT_FONT_FAMILY } from "../../utils/style-utils.tsx";
 import { Education, mySkills } from "../../data/Data.tsx";
 
 interface EducationCardProps {

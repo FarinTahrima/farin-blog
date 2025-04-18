@@ -52,7 +52,7 @@ const SkillsTableView = () => {
     const data = useMemo(() => getData(), [mySkills]);
 
     return (
-        <div className="p-4 max-sm:p-0">
+        <div className="p-4 max-sm:p-0 xl:p-8">
           <div className="overflow-x-auto">
             <table className="min-w-full bg-white border border-gray-200 rounded-lg xl:text-3xl lg:text-2xl text-xl max-sm:text-[12px]">
               <thead className="bg-my_dark_blue text-white">

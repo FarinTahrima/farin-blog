@@ -1,32 +1,18 @@
 import React from "react";
+import { CustomStyle, getStyleClass } from "../utils/style-utils.tsx";
 
 interface CardProps {
     children?: React.ReactNode;
-    predefinedBgColour?: string;
-    customBgColourHex?: string;
-}
-
-export type CardComponent = {
-    predefinedBgColour?: string;
-    customBgColourHex?: string;
+    style?: CustomStyle
 }
 
 const Card = ({
     children,
-    predefinedBgColour,
-    customBgColourHex
+    style
 }: CardProps) => {
 
-    const getCardClass = () => {
-        let cardClass = "";
-        if (predefinedBgColour) { cardClass += ` bg-${predefinedBgColour}` }
-        else if (customBgColourHex) { cardClass += ` bg-[#${customBgColourHex}]` }
-        else { cardClass += " bg-[#FFFFFF]" }
-        return cardClass;
-    }
-
     return (
-        <div className={`${getCardClass()}`}>
+        <div className={`${style && getStyleClass(style)}`}>
             {children}
         </div>
     );

@@ -1,32 +1,18 @@
 import React, { ReactNode } from "react";
+import { CustomStyle, getStyleClass } from "../utils/style-utils.tsx";
 
 interface FlashMessageProps {
     message: string;
-    messageFontFamily?: string;
-    messageColor?: string;
-    messageBgColor?: string;
-    messageBorderColor?: string;
+    style?: CustomStyle;
 }
 
 const FlashMessage = ({
     message,
-    messageFontFamily,
-    messageColor,
-    messageBgColor,
-    messageBorderColor,
+    style
 }: FlashMessageProps) => {
     
-    const getFlashMessageClass = () => {
-        let flashMessageClass = "border p-4 text-l md:text-xl xl:text-2xl";
-        if (messageBorderColor) { flashMessageClass += ` border-${messageBorderColor}`}
-        if (messageFontFamily) { flashMessageClass += ` font-family-[${messageFontFamily}]`}
-        if (messageColor) { flashMessageClass += ` text-${messageColor}`}
-        if (messageBgColor) { flashMessageClass += ` bg-${messageBgColor}`}
-        return flashMessageClass;
-    }
-
     return (
-        <div className={`${getFlashMessageClass()}`}>
+        <div className={`p-4 text-l md:text-xl xl:text-2xl ${style && getStyleClass(style)}`}>
             {message}
         </div>
     );

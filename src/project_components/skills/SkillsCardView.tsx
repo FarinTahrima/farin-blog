@@ -1,5 +1,5 @@
 import React from "react";
-import { DEFAULT_FONT_COLOR, DEFAULT_FONT_FAMILY } from "../../utils/utils.tsx";
+import { DEFAULT_FONT_COLOR, DEFAULT_FONT_FAMILY } from "../../utils/style-utils.tsx";
 import WorkCard from "./WorkCard.tsx";
 import { myEducation, myWork } from "../../data/Data.tsx";
 import EducationCard from "./EducationCard.tsx";

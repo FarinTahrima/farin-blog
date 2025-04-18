@@ -1,7 +1,7 @@
 import React from "react";
 import RoundedImage from "../../reusable_components/RoundedImage.tsx";
 import Tag from "../../reusable_components/Tag.tsx";
-import { DEFAULT_FONT_COLOR, DEFAULT_FONT_FAMILY } from "../../utils/utils.tsx";
+import { DEFAULT_FONT_COLOR, DEFAULT_FONT_FAMILY } from "../../utils/style-utils.tsx";
 import { mySkills, Work } from "../../data/Data.tsx";
 
 interface WorkCardProps {
@@ -82,9 +82,11 @@ const WorkCard = ({
                                 <Tag
                                     key={key}
                                     value={word}
-                                    font-family={DEFAULT_FONT_FAMILY}
-                                    textColor={"my_dark_blue"}
-                                    bgColor={"my_pink"}
+                                    style={{
+                                        fontFamily: DEFAULT_FONT_FAMILY,
+                                        textColour: "my_dark_blue",
+                                        bgColour:"my_pink"
+                                    }}
                                 />
                                 )
                             )}

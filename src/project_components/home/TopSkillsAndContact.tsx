@@ -1,6 +1,6 @@
 import React from "react";
 import CardWithTitle from "../../reusable_components/Card-with-Title.tsx";
-import { DEFAULT_FONT_COLOR, DEFAULT_FONT_FAMILY } from "../../utils/utils.tsx";
+import { DEFAULT_FONT_COLOR, DEFAULT_FONT_FAMILY } from "../../utils/style-utils.tsx";
 
 
 const TopSkillsAndContact = () => {
@@ -9,17 +9,24 @@ const TopSkillsAndContact = () => {
             <CardWithTitle
                     title={{
                         value: "My Top Skills",
-                        fontFamily: DEFAULT_FONT_FAMILY,
-                        predefinedColour: DEFAULT_FONT_COLOR,
-                        bold: true,
+                        titleStyle: {
+                            fontFamily: DEFAULT_FONT_FAMILY,
+                            textColour: DEFAULT_FONT_COLOR,
+                            bold: true,
+                        },
                         suffixLink: {
                             value: "See more skills",
                             link: "/skills",
-                            predefinedColour: "my_blue"
-                        }
+                            style: {
+                                textColour: "my_blue"
+                            },
+                            mobileStyle: {
+                                bgColour: "my_blue"
+                            }
+                        },
                     }}
-                    card={{
-                        predefinedBgColour: "my_light_purple"
+                    cardStyle={{
+                        bgColour: "my_light_purple"
                     }}
                 >
                         Top 3 Skills
@@ -28,12 +35,14 @@ const TopSkillsAndContact = () => {
             <CardWithTitle
                 title={{
                     value: "Words That Define Me",
-                    fontFamily: DEFAULT_FONT_FAMILY,
-                    predefinedColour: DEFAULT_FONT_COLOR,
-                    bold: true,
+                    titleStyle: {
+                        fontFamily: DEFAULT_FONT_FAMILY,
+                        textColour: DEFAULT_FONT_COLOR,
+                        bold: true,
+                    },
                 }}
-                card={{
-                    customBgColourHex: "F5F5F5"
+                cardStyle={{
+                    bgColour: "#F5F5F5"
                 }}
             >
                 Word Cloud
@@ -42,12 +51,14 @@ const TopSkillsAndContact = () => {
             <CardWithTitle
                 title={{
                     value: "Contact Details",
-                    fontFamily: DEFAULT_FONT_FAMILY,
-                    predefinedColour: DEFAULT_FONT_COLOR,
-                    bold: true,
+                    titleStyle: {
+                        fontFamily: DEFAULT_FONT_FAMILY,
+                        textColour: DEFAULT_FONT_COLOR,
+                        bold: true,
+                    },
                 }}
-                card={{
-                    predefinedBgColour: "my_pink"
+                cardStyle={{
+                    bgColour: "my_pink"
                 }}
             >
                 Contact Details

@@ -1,32 +1,18 @@
 import React, { ReactNode } from "react";
+import { CustomStyle, getStyleClass } from "../utils/style-utils.tsx";
 
 interface TagProps {
     value: string;
-    fontFamily?: string;
-    textColor?: string;
-    bgColor?: string;
-    borderColor?: string;
+    style?: CustomStyle
 }
 
 const Tag = ({
     value,
-    fontFamily,
-    textColor,
-    bgColor,
-    borderColor,
+    style
 }: TagProps) => {
-    
-    const getTagClass = () => {
-        let tagClass = "border px-2 font-bold rounded-lg";
-        if (borderColor) { tagClass += ` border-${borderColor}`}
-        if (fontFamily) { tagClass += ` font-family-[${fontFamily}]`}
-        if (textColor) { tagClass += ` text-${textColor}`}
-        if (bgColor) { tagClass += ` bg-${bgColor}`}
-        return tagClass;
-    }
 
     return (
-        <span className={`${getTagClass()}`}>
+        <span className={`border px-2 font-bold rounded-lg ${style && getStyleClass(style)}`}>
             {value}
         </span>
     );
