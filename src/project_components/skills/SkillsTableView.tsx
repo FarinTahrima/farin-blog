@@ -47,8 +47,7 @@ const SkillsTableView = () => {
                 style={{
                     borderColour: "my_dark_purple",
                     textColour: "my_dark_blue",
-                    placeholderTextColour: "my_light_purple",
-                    focusBorderColour: "my_dark_blue"
+                    placeholderTextColour: "my_light_purple"
                 }}
                 onSearch={(text) => setSearchTerm(text)}
             />

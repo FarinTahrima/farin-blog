@@ -26,10 +26,10 @@ const WorkCard = ({
     const bgColorClass = bgColor.startsWith("#") ? `bg-[${bgColor}]` : `bg-${bgColor}`;
     const fontColorClass = designNumber === 1 ? `text-${DEFAULT_FONT_COLOR}` : "text-my_blue";
     return (
-        <div className="relative w-full">
+        <div className="relative w-full rounded-md">
             {/* BACKGROUND CONTAINER */}
             <div
-                className="w-full bg-cover bg-top p-4"
+                className="w-full bg-cover bg-top p-4 rounded-xl transform hover:scale-105 transition-transform duration-300"
                 style={{ backgroundImage: `url(${designUrl})` }}
             >
                 {/* LOCATION IMAGE */}
@@ -37,6 +37,7 @@ const WorkCard = ({
                     <img
                         src={`images/location/${imageUrl}`}
                         className="w-1/2 h-auto"
+                        alt={`design-${designNumber}`}
                     />
                 </div>
 

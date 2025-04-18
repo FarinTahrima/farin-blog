@@ -28,7 +28,7 @@ const EducationCard = ({
         <div className="relative w-full">
             {/* BACKGROUND CONTAINER */}
             <div
-                className="w-full bg-cover bg-top p-4"
+                className="w-full bg-cover bg-top p-4 rounded-xl transform hover:scale-105 transition-transform duration-300"
                 style={{ backgroundImage: `url(${designUrl})` }}
             >
                 {/* LOCATION IMAGE */}

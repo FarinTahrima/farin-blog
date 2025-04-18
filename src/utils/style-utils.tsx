@@ -11,7 +11,6 @@ type CustomStyle = {
     bold?: boolean;
     borderThickness?: number;
     placeholderTextColour?: string;
-    focusBorderColour?: string;
 };
 
 const getTailwindCSSColour = (color: string) => {
@@ -27,8 +26,7 @@ export const getStyleClass = ({
     fontFamily,
     bold,
     borderThickness,
-    placeholderTextColour,
-    focusBorderColour
+    placeholderTextColour
 }: CustomStyle) => {
     let styleClass = "";
     if (bgColour) { styleClass += ` bg-${getTailwindCSSColour(bgColour)}`}
@@ -43,6 +41,5 @@ export const getStyleClass = ({
     if (fontFamily) { styleClass += ` font-family-${getTailwindCSSColour(fontFamily)}`}
     if (bold) { styleClass += ` font-bold`}
     if (placeholderTextColour) { styleClass += ` placeholder:text-${getTailwindCSSColour(placeholderTextColour)}`}
-    if (focusBorderColour) { styleClass += ` focus:border-${getTailwindCSSColour(focusBorderColour)}`}
     return styleClass;
 };

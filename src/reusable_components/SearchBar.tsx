@@ -11,7 +11,6 @@ type SearchBarStyle = {
     borderColour: string;
     textColour: string;
     placeholderTextColour: string;
-    focusBorderColour: string;
 };
 
 const SearchBar = ({
@@ -19,14 +18,13 @@ const SearchBar = ({
     style: {
         borderColour,
         textColour,
-        placeholderTextColour,
-        focusBorderColour
+        placeholderTextColour
     },
     onSearch
 }: SearchBarProps) => {
     return (
         <div className="mt-4">
-            <div className={`relative mb-4 flex w-full flex-wrap items-stretch rounded ${getStyleClass({borderColour, textColour, focusBorderColour})}`}>
+            <div className={`relative mb-4 flex w-full flex-wrap items-stretch rounded ${getStyleClass({borderColour, textColour})}`}>
                 {/* <!--Search icon--> */}
                 <span
                   className="input-group-text flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base font-normal text-neutral-700"
@@ -48,8 +46,6 @@ const SearchBar = ({
                     placeholder="Search"
                     onInput={(e) => onSearch(e.currentTarget.value)}
                 />
-
-              
           </div>
       </div>
     );
