@@ -10,6 +10,8 @@ type CustomStyle = {
     fontFamily?: string;
     bold?: boolean;
     borderThickness?: number;
+    placeholderTextColour?: string;
+    focusBorderColour?: string;
 };
 
 const getTailwindCSSColour = (color: string) => {
@@ -24,16 +26,23 @@ export const getStyleClass = ({
     hoverTextColour,
     fontFamily,
     bold,
-    borderThickness
+    borderThickness,
+    placeholderTextColour,
+    focusBorderColour
 }: CustomStyle) => {
     let styleClass = "";
     if (bgColour) { styleClass += ` bg-${getTailwindCSSColour(bgColour)}`}
     if (textColour) { styleClass += ` text-${getTailwindCSSColour(textColour)}`}
     if (borderThickness) { styleClass += ` border-${borderThickness}`}
-    if (borderColour) { styleClass += ` border-${getTailwindCSSColour(borderColour)}`}
+    if (borderColour) { styleClass += styleClass.includes("border") 
+        ? ` border-${getTailwindCSSColour(borderColour)}`
+        : ` border border-${getTailwindCSSColour(borderColour)}`
+    }
     if (hoverBgColour) { styleClass += ` hover:bg-${getTailwindCSSColour(hoverBgColour)}`}
     if (hoverTextColour) { styleClass += ` hover:text-${getTailwindCSSColour(hoverTextColour)}`}
     if (fontFamily) { styleClass += ` font-family-${getTailwindCSSColour(fontFamily)}`}
     if (bold) { styleClass += ` font-bold`}
+    if (placeholderTextColour) { styleClass += ` placeholder:text-${getTailwindCSSColour(placeholderTextColour)}`}
+    if (focusBorderColour) { styleClass += ` focus:border-${getTailwindCSSColour(focusBorderColour)}`}
     return styleClass;
 };

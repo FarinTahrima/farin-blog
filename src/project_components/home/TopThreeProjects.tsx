@@ -44,9 +44,11 @@ const TopThreeProjects = () => {
                         {/* TOP 3 PROJECTS */}
                         <div className="grid lg:grid-cols-3 xl:grid-cols-3 sm:grid-cols-1 md:grid-cols-1 gap-8 lg:p-0 max-sm:gap-4 mt-4">
                             {myProjects.filter(p => p.top3).map((item, key) => (
-                                <Card style={{
-                                    bgColour: key % 2 == 1 ? "my_pink": "my_light_purple"
-                                }}
+                                <Card
+                                    key={key}
+                                    style={{
+                                        bgColour: key % 2 === 1 ? "my_pink": "my_light_purple"
+                                    }}
                                 >
                                     <div className="p-4">
                                         <p>{item.title}</p>

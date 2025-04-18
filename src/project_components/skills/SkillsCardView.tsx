@@ -8,7 +8,7 @@ const SkillsCardView = () => {
     return (
         <div>
             {/* WORK EXPERIENCE */}
-            <p className={`font-family-[${DEFAULT_FONT_FAMILY}] text-${DEFAULT_FONT_COLOR} text-3xl font-bold mt-4 p-4`}>
+            <p className={`font-family-[${DEFAULT_FONT_FAMILY}] text-my_dark_blue bg-my_pink text-3xl font-bold mt-4 p-4 max-sm:text-2xl max-sm:mt-2`}>
                 Work Experience
             </p>
             <div className="grid justify-items-center 2xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2 gap-8 lg:p-0 max-sm:gap-4 mt-4">
@@ -22,7 +22,7 @@ const SkillsCardView = () => {
             </div>
 
             {/* EDUCATION */}
-            <p className={`font-family-[${DEFAULT_FONT_FAMILY}] text-${DEFAULT_FONT_COLOR} text-3xl font-bold mt-4 p-4`}>
+            <p className={`font-family-[${DEFAULT_FONT_FAMILY}] text-my_dark_blue bg-my_pink text-3xl font-bold mt-4 p-4 max-sm:text-2xl max-sm:mt-2`}>
                 Education
             </p>
             <div className="grid justify-items-center 2xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2 gap-8 lg:p-0 max-sm:gap-4 mt-4">

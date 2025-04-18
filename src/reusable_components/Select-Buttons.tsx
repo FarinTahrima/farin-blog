@@ -6,6 +6,7 @@ interface SelectButtonProps {
     selectedOption: string;
     defaultStyle: DefaultButtonStyle;
     selectStyle: SelectedButtonStyle;
+    onSelect?: (option: string) => void;
 };
 
 // STYLE TYPES
@@ -28,9 +29,9 @@ const SelectButtons = ({
     options,
     selectedOption,
     defaultStyle,
-    selectStyle
+    selectStyle,
+    onSelect
 }: SelectButtonProps) => {
-
     return (
         <div className="inline-flex">
             {options.map((option, key) =>{
@@ -38,7 +39,11 @@ const SelectButtons = ({
                     ? getStyleClass(selectStyle)
                     : getStyleClass(defaultStyle);
                 return (
-                    <button key={key} className={`${styleClass} font-bold py-2 px-4 text-xl`}>
+                    <button
+                        key={key}
+                        className={`${styleClass} font-bold py-2 px-4 text-xl max-sm:text-base max-sm:p-2`}
+                        onClick={() => onSelect && onSelect(option)}
+                    >
                        {option}
                    </button>
                 )

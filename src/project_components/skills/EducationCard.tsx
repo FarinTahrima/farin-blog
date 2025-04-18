@@ -1,6 +1,5 @@
 import React from "react";
 import RoundedImage from "../../reusable_components/RoundedImage.tsx";
-import Tag from "../../reusable_components/Tag.tsx";
 import { DEFAULT_FONT_COLOR, DEFAULT_FONT_FAMILY } from "../../utils/style-utils.tsx";
 import { Education, mySkills } from "../../data/Data.tsx";
 
@@ -13,6 +12,7 @@ const EducationCard = ({
     designNumber,
     education: {
         location: {
+            name,
             imageUrl,
             bgColor
         },
@@ -36,6 +36,7 @@ const EducationCard = ({
                     <img
                         src={`images/location/${imageUrl}`}
                         className="w-1/2 h-auto"
+                        alt={name}
                     />
                 </div>
 

@@ -37,9 +37,13 @@ module.exports = {
     "font-family-[Cambay]",
 
     //BORDER
-    "border-gray-700",
-    "border-my_pink"
-    
+    "border-2 border-gray-700",
+    "border-4 border-my_pink",
+    "border border-my_dark_purple",
+    "border border-my_dark_blue",
+
+    //PLACEHOLDER
+    "placeholder:text-my_light_purple"
   ],
   plugins: [],
 }
