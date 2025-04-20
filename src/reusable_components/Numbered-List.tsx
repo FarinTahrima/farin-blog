@@ -25,7 +25,7 @@ const NumberedList = ({
                     <div key={key} className="flex justify-items-start gap-4 2xl:gap-8 m-4">
                         <div className="w-[70px] h-full rounded-lg overflow-hidden text-center relative">
                             <div
-                                className={`w-10 h-10 2xl:w-16 2xl:h-16 rounded-full 
+                                className={`w-10 h-10 lg:w-14 lg:h-14 rounded-full 
                                     inline-flex items-center justify-center 
                                     bg-white text-xl 2xl:text-2xl font-bold ${getStyleClass(style)}`}>
                                 {count}
