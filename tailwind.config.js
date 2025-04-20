@@ -24,6 +24,7 @@ module.exports = {
     "bg-gray-100",
     "bg-black",
     "bg-[#C7FE02]",
+    "bg-red-100",
 
     // TEXT COLOURS
     "text-my_dark_purple",
@@ -32,6 +33,7 @@ module.exports = {
     "text-gray-700",
     "text-my_pink",
     "text-my_light_purple",
+    "text-red-700",
 
     // FONT
     "font-family-[Cambay]",
@@ -41,6 +43,7 @@ module.exports = {
     "border-4 border-my_pink",
     "border border-my_dark_purple",
     "border border-my_dark_blue",
+    "border border-red-700",
 
     //PLACEHOLDER
     "placeholder:text-my_light_purple"

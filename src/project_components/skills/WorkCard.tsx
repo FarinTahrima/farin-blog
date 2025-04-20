@@ -54,7 +54,7 @@ const WorkCard = ({
                         <p className="font-bold text-2xl max-sm:text-xl">
                             Skills Acquired
                         </p>
-                        <div className="grid 2xl:grid-cols-5 xl:grid-cols-4 sm:grid-cols-3 max-sm:grid-cols-3 mt-2 justify-items-center">
+                        <div className="grid 3xl:grid-cols-5 2xl:grid-cols-4 sm:grid-cols-3 max-sm:grid-cols-3 mt-2 justify-items-center">
                             {skills.map((skill, key) => {
                                 const skilInfo = mySkills.find((s => s.name === skill));
                                 return (
@@ -64,7 +64,7 @@ const WorkCard = ({
                                             radius={30}
                                             alt={skilInfo?.name}
                                         />
-                                        <p className="text-my_dark_blue text-center 2xl:text-2xl xl:text-xl max-sm:text-m">
+                                        <p className="text-my_dark_blue text-center text-xl max-sm:text-base">
                                             {skilInfo?.name}
                                         </p>
                                     </div>

@@ -4,7 +4,7 @@ import SelectButtons from "../reusable_components/Select-Buttons.tsx";
 import SkillsCardView from "../project_components/skills/SkillsCardView.tsx";
 import SkillsTableView from "../project_components/skills/SkillsTableView.tsx";
 
-const Skills = () => {
+const SkillPage = () => {
     const [ selectedOption, setSelectedOption ] = useState<string>("Card");
 
     return (
@@ -41,4 +41,4 @@ const Skills = () => {
     );
   };
 
-  export default Skills;
+  export default SkillPage;

@@ -11,7 +11,7 @@ const SkillsCardView = () => {
             <p className={`font-family-[${DEFAULT_FONT_FAMILY}] bg-my_pink text-my_blue text-3xl font-bold mt-4 p-4 max-sm:text-2xl max-sm:mt-2`}>
                 Work Experience
             </p>
-            <div className="grid justify-items-center 2xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2 gap-8 lg:p-0 max-sm:gap-4 mt-4">
+            <div className="grid justify-items-center 2xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 md:grid-cols-2 gap-8 lg:p-0 max-sm:gap-4 mt-4">
                 {myWork.map((work, key) => (
                     <WorkCard
                         key={key}
@@ -25,7 +25,7 @@ const SkillsCardView = () => {
             <p className={`font-family-[${DEFAULT_FONT_FAMILY}] bg-my_pink text-my_blue text-3xl font-bold mt-4 p-4 max-sm:text-2xl max-sm:mt-2`}>
                 Education
             </p>
-            <div className="grid justify-items-center 2xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2 gap-8 lg:p-0 max-sm:gap-4 mt-4">
+            <div className="grid justify-items-center 2xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 md:grid-cols-2 gap-8 lg:p-0 max-sm:gap-4 mt-4">
                 {myEducation.map((education, key) => (
                     <EducationCard
                         key={key}
