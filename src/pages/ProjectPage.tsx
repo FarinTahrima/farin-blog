@@ -7,10 +7,30 @@ import { myProjects, mySkills, Project } from "../data/Data.tsx";
 import RoundedImage from "../reusable_components/RoundedImage.tsx";
 import { useParams } from "react-router-dom";
 import FlashMessage from "../reusable_components/FlashMessage.tsx";
+import CustomerViewSimulation from "../project_components/simulation/customer-view/CustomerViewSimulation.tsx";
 
 const ProjectPage = () => {
     let id = useParams().id;
     const project: Project|undefined = myProjects.find(p => p.id === id);
+
+    const getSimulationElement = (id: string): any => {
+        switch(id){
+            case "customer-view":
+                return <CustomerViewSimulation />
+            default:
+                return (
+                <FlashMessage
+                    message={"Sorry, this simulation is not available at the moment."}
+                    style={{
+                        fontFamily: DEFAULT_FONT_FAMILY,
+                        textColour:"red-700",
+                        borderColour:"red-700",
+                        bgColour:"red-100",
+                        borderThickness: 2
+                    }}
+                />);
+        }
+    };
 
     return project 
         ? (
@@ -23,11 +43,13 @@ const ProjectPage = () => {
                     <div className="lg:col-span-2 2xl:col-span-3">
                         <Card
                             style={{
-                                bgColour: "my_pink"
+                                bgColour: "white"
                             }}
                         >
-                            <div className="h-[700px] max-sm:h-[350px] w-full">
-                                
+                            <div className="flex justify-around p-4">
+                               <div className="w-[80%] max-sm:w-[100%]">
+                                    {getSimulationElement(project.id)}
+                               </div>  
                             </div>
                         </Card>
                     </div>

@@ -3,7 +3,6 @@ export type Project = {
     location: string;
     top3: boolean;
     id: string;
-    simulation?: any;
     simulationCaption?: any;
     description: string;
     features: string[];
@@ -40,8 +39,16 @@ export type Education = {
   achievements: string[];
 };
 
-
 export const myProjects: Project[] = [
+    { 
+      title: "Customer View Calculator", 
+      location: "DBS", 
+      top3: true,
+      id: "customer-view",
+      description: "Lorem ipsum",
+      features: ["FEATURE A", "RANDOM"],
+      skills: ["Java", "SQL", "React"]
+    },
     { 
       title: "EventHub", 
       location: "FDM", 

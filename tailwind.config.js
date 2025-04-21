@@ -10,30 +10,21 @@ module.exports = {
         my_pink: "#F5DDDD",
         my_light_purple: "#C2B2B4",
         my_blue: "#53687E",
-        my_dark_blue: "#3A4454"
+        my_dark_blue: "#3A4454",
+        my_gray: "#F5F5F5"
       }
     },
   },
   safelist: [
-    // BACKGROUD COLOURS
-    "bg-my_pink",
-    "bg-[#F5F5F5]",
-    "bg-my_light_purple",
-    "bg-white",
-    "bg-my_blue",
-    "bg-gray-100",
-    "bg-black",
-    "bg-[#C7FE02]",
-    "bg-red-100",
-
-    // TEXT COLOURS
-    "text-my_dark_purple",
-    "text-my_blue",
-    "text-my_dark_blue",
-    "text-gray-700",
-    "text-my_pink",
-    "text-my_light_purple",
-    "text-red-700",
+    // BACKGROUD AND TEXT COLOURS
+    {
+      pattern: /(bg|text)-my_(pink|light_purple|gray|blue|black|[#C7FE02])/,
+      variants: ['focus', 'placeholder']
+    },
+    {
+      pattern: /(bg|text)-(gray|red|blue)-(700|500|300|100)/,
+      variants: ['focus', 'placeholder']
+    },
 
     // FONT
     "font-family-[Cambay]",
@@ -44,10 +35,7 @@ module.exports = {
     "border border-my_dark_purple",
     "border border-my_dark_blue",
     "border border-red-700",
-
-    //PLACEHOLDER
-    "placeholder:text-my_light_purple"
+    "focus:border-blue-300"
   ],
   plugins: [],
 }
-

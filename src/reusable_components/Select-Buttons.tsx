@@ -41,7 +41,7 @@ const SelectButtons = ({
                 return (
                     <button
                         key={key}
-                        className={`${styleClass} font-bold py-2 px-4 text-xl max-sm:text-base max-sm:p-2`}
+                        className={`${styleClass} font-bold py-2 px-4 2xl:text-xl text-lg md:text-base md:p-2 max-sm:text-base max-sm:p-2`}
                         onClick={() => onSelect && onSelect(option)}
                     >
                        {option}

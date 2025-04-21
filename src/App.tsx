@@ -6,6 +6,7 @@ import Navbar from "./pages/Navbar.tsx";
 import SkillPage from "./pages/SkillPage.tsx";
 import ProjectPage from "./pages/ProjectPage.tsx";
 import ErrorPage from "./pages/ErrorPage.tsx";
+import CustomerViewSimulation from "./project_components/simulation/customer-view/CustomerViewSimulation.tsx";
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         <Route index element={<Home />} />
         <Route path="skills" element={<SkillPage />} />
         <Route path="projects/:id" element={<ProjectPage />} />
+        {/* temp */}
+        {/* <Route path="projects" element={<CustomerViewSimulation />} /> */}
         <Route path="*" element={<ErrorPage />} />
       </Route>
     </Routes>
